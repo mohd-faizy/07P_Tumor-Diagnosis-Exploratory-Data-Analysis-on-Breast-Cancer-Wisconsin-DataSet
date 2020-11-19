@@ -40,35 +40,35 @@ Features are computed from a digitized image of a fine needle aspirate (FNA) of 
 - Note that this does not constitute feature selection. We are dropping columns that have no bearing on the analysis we will be conducting, and will instead clutter our analysis. After producing descriptive statistics about the data, we will separate the target from the features.
 - The target contains the diagnosis with binary class labels, M or B, for malignant and benign tumors respectively. 
 
-### Diagnosis Distribution Visualization
+#### :zero::three: Diagnosis Distribution Visualization
 
 - A very common question during model evaluation is, "Why isn't the model I've picked predictive?". Most often, it is a result of a class imbalance.
 - In this task, we will use Seaborn's countplot() method to visualize the target distributions.
 - We will also generate descriptive statistics about the features that summarize the central tendency, dispersion and shape of the data set's distribution.
 
-#### :zero::three: Visualizing Standardized Data with Seaborn
+#### :zero::four: Visualizing Standardized Data with Seaborn
 
 - As the columns in the data set take on values of varying range, we need to standardize the data before proceeding with further analysis and visualization.
 - To begin feature analysis, we use Seaborn's violinplot() method. Violin plots are similar to box plots, except that they also show the probability density of the data at different values, usually smoothed by a kernel density estimator. 
 
-#### :zero::four: Violin Plots and Box Plots
+#### :zero::five: Violin Plots and Box Plots
 
 - We are using violin plots and box plots to identify features that best separate the data for classification.
 - Box plots are especially useful in identifying outliers in the data.
 - Using violin plots, we are also able to infer whether certain features are correlated.
 - To minimize clutter in our visualizations, we divide the features into three batches of ten features and produce separate plots for them.
 
-#### :zero::five: Using Joint Plots for Feature Comparison
+#### :zero::six: Using Joint Plots for Feature Comparison
 
 - Joint plots come in handy to illustrate the relationship between two features.
 - We will use seaborn's jointplot() method to draw a scatter plot with marginal histograms and kernel density fits. We can examine the relationship between any two features using the Pearson correlation coefficient of the regression through our scatter plot.
 
-#### :zero::six: Observing the Distribution of Values and their Variance with Swarm Plots
+#### :zero::seven: Observing the Distribution of Values and their Variance with Swarm Plots
 
 - We have learned that violin plots are a great tool for visualizing sparse distributions. As our data set contains close to 600 rows, we might want to simply display each point in the same visualization.
 - This need is satisfied by Seaborn's swarmplot() method. A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution.
 
-#### :zero::seven: Observing all Pairwise Correlations
+#### :zero::eight: Observing all Pairwise Correlations
 
 - A good way to identify correlations between features is to visualize the correlation matrix as a heatmap.
 - We will make a note of the correlated features so that we can drop them from our data set before building a predictive model in the next project.
